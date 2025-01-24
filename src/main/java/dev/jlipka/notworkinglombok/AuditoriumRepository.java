@@ -1,4 +1,4 @@
-package dev.jlipka.cinemahibernate.auditorium;
+package dev.jlipka.notworkinglombok;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
