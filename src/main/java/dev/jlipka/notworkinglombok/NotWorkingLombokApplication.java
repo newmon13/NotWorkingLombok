@@ -12,18 +12,18 @@ public class NotWorkingLombokApplication {
         SpringApplication.run(NotWorkingLombokApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner runner(AuditoriumRepository repository) {
-        return args -> {
-            Auditorium auditorium = Auditorium.builder()
-                    .name("Sala 1")
-                    .capacity(12)
-                    .screenType(ScreenType.TYPE_2D)
-                    .auditoriumType(AuditoriumType.REGULAR)
-                    .build();
-
-            repository.save(auditorium);
-        };
-    }
+//    @Bean
+//    CommandLineRunner runner(AuditoriumRepository repository) {
+//        return args -> {
+//            Auditorium auditorium = Auditorium.builder()
+//                    .name("Sala 1")
+//                    .capacity(12)
+//                    .screenType(ScreenType.TYPE_2D)
+//                    .auditoriumType(AuditoriumType.REGULAR)
+//                    .build();
+//
+//            repository.save(auditorium);
+//        };
+//    }
 
 }
