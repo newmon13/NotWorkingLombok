@@ -13,24 +13,27 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Builder
+@Data // Adnotacja @Data generuje getter-y, setter-y, toString(), equals() i hashCode().
 @NoArgsConstructor
 @AllArgsConstructor
-@Data // Zapewnia generowanie getterów, setterów, equals(), hashCode() i toString()
+@Builder
+@Entity
 @Table(name = "auditoriums")
 public class Auditorium {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     private int capacity;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "auditorium_type")
     private AuditoriumType auditoriumType;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "screen_type")
     private ScreenType screenType;
-
 }
