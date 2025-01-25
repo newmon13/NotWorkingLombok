@@ -21,7 +21,12 @@ class AuditoriumRepositoryTest {
     @Test
     void shouldSaveAndFindAuditoriumInDatabase() {
         // Given: Przygotowanie danych testowych
-        Auditorium auditorium = Auditorium.builder().name("Test Auditorium").capacity(200).auditoriumType(AuditoriumType.REGULAR).screenType(ScreenType.TYPE_2D).build();
+        Auditorium auditorium = Auditorium.builder()
+                .name("Test Auditorium")
+                .capacity(200)
+                .auditoriumType(AuditoriumType.REGULAR)
+                .screenType(ScreenType.TYPE_2D)
+                .build();
 
         // When: Zapis do bazy danych
         Auditorium savedAuditorium = auditoriumRepository.save(auditorium);
